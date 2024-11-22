@@ -1,21 +1,34 @@
 import React, { useState, useEffect } from 'react';
 
 function ProfilUtilisateur() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [amis, setAmis] = useState([]);
   const [filtre, setFiltre] = useState('');
 
+  const [isLoading, setIsLoading] = useState(false);
+
+  console.log(`ProfilUtilisateur has been executed.`);
   useEffect(() => {
+    console.log(`ProfilUtilisateur useEffect has been executed.`);
     if (isLoggedIn) {
+      setIsLoading(true);
       fetch("https://jsonplaceholder.typicode.com/users")
         .then(response => response.json())
-        .then(data => setAmis(data));
+        .then(data => {
+          setAmis(data);
+          setIsLoading(false);
+        });
     }
   }, [isLoggedIn]);
 
   const amisFiltres = amis.filter(ami =>
     ami.name.toLowerCase().includes(filtre.toLowerCase())
   );
+
+
+  if(isLoading){
+    return <h5>Chargement de donnes</h5>
+  }
 
   return (
     <div>

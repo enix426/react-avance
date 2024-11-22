@@ -6,6 +6,7 @@ import Bienvenue, {
   UserProvider,
   Welcome,
 } from "./components/ch02/Examples";
+import ProfilUtilisateur from "./components/ch02/Exercise";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <UserInfo />
         <UserControls />
       </UserProvider>
+
+      <ProfilUtilisateur />
     </>
   );
 }
