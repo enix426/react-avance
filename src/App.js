@@ -7,7 +7,7 @@ import Bienvenue, {
   Welcome,
 } from "./components/ch02/Examples";
 import ProfilUtilisateur from "./components/ch02/Exercise";
-import { ChampTexteAutoFocus, Compteur1 } from "./components/ch03/Examples";
+import { ChampTexteAutoFocus, Compteur1, CompteurAvecCallback } from "./components/ch03/Examples";
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
       <ProfilUtilisateur />
       <Compteur1 />
       <ChampTexteAutoFocus />
+      <CompteurAvecCallback />
     </>
   );
 }
