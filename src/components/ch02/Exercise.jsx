@@ -8,6 +8,8 @@ function ProfilUtilisateur() {
   const [isLoading, setIsLoading] = useState(false);
 
   console.log(`ProfilUtilisateur has been executed.`);
+
+  
   useEffect(() => {
     console.log(`ProfilUtilisateur useEffect has been executed.`);
     if (isLoggedIn) {
