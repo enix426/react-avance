@@ -53,8 +53,9 @@ export const CompteurAvecCallback = () => {
 
 export const useFetch = (url) => {
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  console.log(`useFetch data ${data} loading ${loading}`);
   useEffect(() => {
     setLoading(true);
     fetch(url)

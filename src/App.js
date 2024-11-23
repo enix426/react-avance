@@ -8,6 +8,7 @@ import Bienvenue, {
 } from "./components/ch02/Examples";
 import ProfilUtilisateur from "./components/ch02/Exercise";
 import { ChampTexteAutoFocus, Compteur1, CompteurAvecCallback } from "./components/ch03/Examples";
+import { ListeProduits } from "./components/ch03/ListProduits";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Compteur1 />
       <ChampTexteAutoFocus />
       <CompteurAvecCallback />
+      <ListeProduits />
     </>
   );
 }
