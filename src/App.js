@@ -7,11 +7,17 @@ import Bienvenue, {
   Welcome,
 } from "./components/ch02/Examples";
 import ProfilUtilisateur from "./components/ch02/Exercise";
+<<<<<<< Updated upstream
+=======
+import { ChampTexteAutoFocus, Compteur1, CompteurAvecCallback } from "./components/ch03/Examples";
+import { ListeProduits } from "./components/ch03/ListProduits";
+import { ProductSearchApp } from "./components/ch03/Exercise";
+>>>>>>> Stashed changes
 
 function App() {
   return (
     <>
-      <Bienvenue nom="John" />
+      {/* <Bienvenue nom="John" />
       <Welcome nom="Alex" />
       <Compteur />
       <Connexion isLoggedIn={false} />
@@ -24,6 +30,14 @@ function App() {
       </UserProvider>
 
       <ProfilUtilisateur />
+<<<<<<< Updated upstream
+=======
+      <Compteur1 />
+      <ChampTexteAutoFocus />
+      <CompteurAvecCallback />
+      <ListeProduits /> */}
+      <ProductSearchApp />
+>>>>>>> Stashed changes
     </>
   );
 }
