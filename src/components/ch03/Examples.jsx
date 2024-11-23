@@ -78,9 +78,14 @@ export const useFetch = (url) => {
 };
 
 const ComposantMemoise = React.memo(function ({ value }) {
-  console.log("Composant rendu");
+  console.log("ComposantMemoise rendu");
   return <p>Valeur : {value}</p>;
 });
+
+const ComposantNormal = ({value}) => {
+  console.log("ComposantNormal rendu");
+  return <p>Valeur : {value}</p>;
+}
 
 export const Parent = () => {
   const [count, setCount] = useState(0);
@@ -89,7 +94,8 @@ export const Parent = () => {
       <button onClick={() => setCount(count + 1)}>
         Incrémenter le compteur
       </button>
-      <ComposantMemoise value="Fixe" />
+      <ComposantMemoise value="Memoise" />
+      <ComposantNormal value="non memoise" />
     </div>
   );
 };

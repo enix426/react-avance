@@ -7,7 +7,8 @@ import Bienvenue, {
   Welcome,
 } from "./components/ch02/Examples";
 import ProfilUtilisateur from "./components/ch02/Exercise";
-import { ChampTexteAutoFocus, Compteur1, CompteurAvecCallback } from "./components/ch03/Examples";
+import { Calcul, ChampTexteAutoFocus, Compteur1, CompteurAvecCallback, Parent } from "./components/ch03/Examples";
+import ProductSearchApp from "./components/ch03/Exercise";
 import { ListeProduits } from "./components/ch03/ListProduits";
 
 function App() {
@@ -30,6 +31,12 @@ function App() {
       <ChampTexteAutoFocus />
       <CompteurAvecCallback />
       <ListeProduits />
+
+      <Parent />
+
+      <Calcul />
+
+      <ProductSearchApp />
     </>
   );
 }

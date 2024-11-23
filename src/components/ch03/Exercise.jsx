@@ -3,7 +3,7 @@ import React, { useState, useEffect, useMemo } from "react";
 // Hook personnalisé pour la recherche de produits
 const useProductSearch = (query) => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
     fetch("https://fakestoreapi.com/products")
@@ -29,7 +29,7 @@ const ProductList = React.memo(({ products }) => {
   console.log("Rendering ProductList");
   return (
     <ul>
-      {products.map((product) => (
+      {products && products.map((product) => (
         <li key={product.id}>{product.title}</li>
       ))}
     </ul>
