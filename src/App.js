@@ -14,6 +14,9 @@ import { ListeProduits } from "./components/ch03/ListProduits";
 function App() {
   return (
     <>
+    {
+      /**
+       
       <Bienvenue nom="John" />
       <Welcome nom="Alex" />
       <Compteur />
@@ -37,7 +40,11 @@ function App() {
       <Calcul />
 
       <ProductSearchApp />
+
+       */
+    }
     </>
+    
   );
 }
 

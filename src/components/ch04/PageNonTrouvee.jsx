@@ -9,6 +9,7 @@ const NotFoundContainer = styled.div`
   min-height: 100vh;
   background-color: #f8d7da;
   color: #721c24;
+  text-align: center;
 `;
 
 const Title = styled.h2`

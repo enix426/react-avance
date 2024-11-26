@@ -1,17 +1,18 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Accueil from './pages/Accueil';
-import Login from './pages/Login';
-import Profil from './pages/Profil';
-import Erreur404 from './pages/Erreur404';
-import RouteProtegee from './components/RouteProtegee';
+import Accueil from './Accueil';
+import Login from './Login';
+import Profil from './Profil';
+import { PageNonTrouvee } from './Erreur404';
+import RouteProtegee from './RouteProtegee';
+import Header from './Header';
 
 const App = () => {
-  const isAuthenticated = false; // Remplacez par la logique d'authentification réelle
+  const isAuthenticated = false; // Replace with actual authentication logic
 
   return (
     <Router>
+      <Header isAuthenticated={isAuthenticated} />
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/login" element={<Login />} />
@@ -19,7 +20,7 @@ const App = () => {
           path="/profil/:id"
           element={<RouteProtegee isAuthenticated={isAuthenticated} element={<Profil />} />}
         />
-        <Route path="*" element={<Erreur404 />} />
+        <Route path="*" element={<PageNonTrouvee />} />
       </Routes>
     </Router>
   );

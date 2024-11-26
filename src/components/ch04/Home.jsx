@@ -8,6 +8,7 @@ const HomePage = styled.div`
   justify-content: center;
   min-height: 100vh;
   background-color: #f0f8ff;
+  color: #333;
 `;
 
 const Title = styled.h1`
@@ -17,18 +18,18 @@ const Title = styled.h1`
 
 const Description = styled.p`
   font-size: 1.2rem;
-  color: #333;
+  color: #555;
 `;
 
-const Accueil = () => {
+const Home = () => {
   return (
     <HomePage>
-      <Title>Bienvenue à l'application React</Title>
+      <Title>Bienvenue</Title>
       <Description>
-        Naviguez entre les pages à l'aide du menu ci-dessus pour explorer les fonctionnalités.
+        Ceci est la page d'accueil. Utilisez les liens pour naviguer dans l'application.
       </Description>
     </HomePage>
   );
 };
 
-export default Accueil;
+export default Home;

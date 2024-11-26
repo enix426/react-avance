@@ -1,5 +1,4 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 const ProfilePage = styled.div`
@@ -9,22 +8,26 @@ const ProfilePage = styled.div`
   justify-content: center;
   min-height: 100vh;
   background-color: #f9f9f9;
+  color: #333;
 `;
 
-const Title = styled.h2`
+const Title = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 20px;
 `;
 
-const Profil = () => {
-  const { id } = useParams();
+const Description = styled.p`
+  font-size: 1.2rem;
+  color: #555;
+`;
 
+const Profile = () => {
   return (
     <ProfilePage>
-      <Title>Profil de l'utilisateur</Title>
-      <p>ID de l'utilisateur : {id}</p>
+      <Title>Bienvenue dans votre Profil</Title>
+      <Description>Ceci est une page protégée. Vous êtes authentifié.</Description>
     </ProfilePage>
   );
 };
 
-export default Profil;
+export default Profile;
