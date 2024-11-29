@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Profil from './Profile';
 import Login from './Login';
 import RouteProtegee from './RouteProtegee';
@@ -7,7 +7,7 @@ import Home from './Home'; // New home page component
 import { PageNonTrouvee } from './PageNonTrouvee';
 
 const App = () => {
-  const isAuthenticated = false; // Replace with actual authentication logic
+  const isAuthenticated = true; // Replace with actual authentication logic
 
   return (
     <Router>

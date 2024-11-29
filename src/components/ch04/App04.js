@@ -6,7 +6,7 @@ import RouteProtegee from './RouteProtegee';
 import Home from './Home'; // New home page component
 
 const App = () => {
-  const isAuthenticated = false; // Replace with actual authentication logic
+  const isAuthenticated = true; // Replace with actual authentication logic
 
   return (
     <Router>

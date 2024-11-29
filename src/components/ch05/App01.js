@@ -2,8 +2,8 @@
 
 import React from "react";
 import { Provider } from "react-redux";
-import store from "./store";
-import CounterComponent from "./CounterComponent";
+import store from "./store1";
+import CounterComponent from "./CounterComponent1";
 
 const App = () => {
   return (

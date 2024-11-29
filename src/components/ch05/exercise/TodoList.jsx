@@ -1,31 +1,27 @@
-// components/TodoList.js
+// TodoList.js
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { toggleTodo, deleteTodo } from './todoSlice';
+import styled from 'styled-components';
+import TodoItem from './TodoItem';
 
-const TodoList = () => {
-    const todos = useSelector((state) => state.todos);
-    const dispatch = useDispatch();
+const TodoListContainer = styled.ul`
+  list-style: none;
+  padding: 0;
+  width: 400px;
+`;
 
-    return (
-        <ul>
-            {todos.map((todo) => (
-                <li
-                    key={todo.id}
-                    style={{
-                        textDecoration: todo.completed ? 'line-through' : 'none',
-                    }}
-                >
-                    <span onClick={() => dispatch(toggleTodo(todo.id))}>
-                        {todo.text}
-                    </span>
-                    <button onClick={() => dispatch(deleteTodo(todo.id))}>
-                        Supprimer
-                    </button>
-                </li>
-            ))}
-        </ul>
-    );
+const TodoList = ({ todos, onToggle, onDelete }) => {
+  return (
+    <TodoListContainer>
+      {todos.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          onToggle={onToggle}
+          onDelete={onDelete}
+        />
+      ))}
+    </TodoListContainer>
+  );
 };
 
 export default TodoList;
