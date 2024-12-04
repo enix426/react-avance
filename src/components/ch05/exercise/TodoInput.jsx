@@ -32,7 +32,8 @@ const AddButton = styled.button`
 `;
 
 const TodoInput = ({ onAdd }) => {
-  const [task, setTask] = useState('');
+  const [task, setTask] = useState('Bonjour');
+
 
   const handleAddTodo = (e) => {
     e.preventDefault();
