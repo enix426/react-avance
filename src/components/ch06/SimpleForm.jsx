@@ -9,7 +9,6 @@ const SimpleForm = () => {
   };
   return (
     <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
-      {() => (
         <Form>
           <div>
             <label htmlFor="username">Nom d'utilisateur</label>
@@ -23,7 +22,6 @@ const SimpleForm = () => {
           </div>
           <button type="submit">S'inscrire</button>
         </Form>
-      )}
     </Formik>
   );
 };

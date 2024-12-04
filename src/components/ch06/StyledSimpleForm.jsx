@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, ErrorMessage } from "formik";
 import validationSchema from "./validationSchema";
 import {
   FormContainer,
@@ -18,8 +18,10 @@ const StyledSimpleForm = () => {
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
+      validateOnBlur={false} // Disable validation on blur
+      validateOnChange={false} // Disable validation on change
     >
-      {() => (
+      {(/*{ values, errors, touched, isSubmitting, handleReset }*/) => (
         <FormContainer>
           <Form>
             <div>

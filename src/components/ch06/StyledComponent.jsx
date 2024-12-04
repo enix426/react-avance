@@ -12,7 +12,7 @@ export const FormContainer = styled.div`
 export const StyledField = styled(Field)`
   width: 95%;
   padding: 10px;
-  margin: 10px 0;
+  margin: 2px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
 `;
@@ -20,12 +20,14 @@ export const StyledField = styled(Field)`
 export const StyledError = styled.div`
   color: red;
   font-size: 12px;
+  margin-bottom: 3px;
 `;
 
 export const StyledButton = styled.button`
   background-color: #007bff;
   color: white;
   padding: 10px 15px;
+  margin: 10px 0px;
   border: none;
   border-radius: 5px;
   cursor: pointer;

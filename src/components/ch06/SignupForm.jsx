@@ -6,7 +6,7 @@ import styled from 'styled-components';
 // Styled-Components
 const FormContainer = styled.div`
   max-width: 400px;
-  margin: 0 auto;
+  margin: 15px auto;
   padding: 20px;
   background: #f9f9f9;
   border-radius: 10px;
@@ -16,14 +16,15 @@ const FormContainer = styled.div`
 const StyledField = styled(Field)`
   width: 95%;
   padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
+  margin: 2px 0;
+  border: 1px solid #ccc;
   border-radius: 5px;
 `;
 
-const StyledError = styled.div`
+export const StyledError = styled.div`
   color: red;
   font-size: 12px;
+  margin-bottom: 3px;
 `;
 
 const StyledButton = styled.button`
