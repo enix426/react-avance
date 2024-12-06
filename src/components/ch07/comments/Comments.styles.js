@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Button } from 'antd';
 
 export const Container = styled.div`
   max-width: 800px;
@@ -58,7 +59,7 @@ export const Error = styled.div`
   margin-top: 5px;
 `;
 
-export const Button = styled.button`
+export const StyledButton = styled(Button)`
   background-color: #007bff;
   color: white;
   padding: 10px 20px;
@@ -104,4 +105,11 @@ export const CommentList = styled.ul`
       color: #888;
     }
   }
+`;
+
+export const SpinnerContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
 `;

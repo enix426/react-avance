@@ -5,7 +5,6 @@ import SimpleForm from "./SimpleForm";
 import StyledSimpleForm from "./StyledSimpleForm";
 import SignupForm from "./SignupForm";
 
-
 const App = () => {
   return (
     <>

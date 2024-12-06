@@ -44,7 +44,7 @@ const StyledButton = styled.button`
 const validationSchema = Yup.object({
   username: Yup.string().min(3, 'Au moins 3 caractères').required('Requis'),
   email: Yup.string().email('Email invalide').required('Requis'),
-  password: Yup.string().min(8, 'Au moins 8 caractères').required('Requis'),
+  password: Yup.string().min(8, 'Au moins 8 carèreacts').required('Requis'),
   confirmPassword: Yup.string()
     .oneOf([Yup.ref('password'), null], 'Les mots de passe ne correspondent pas')
     .required('Requis'),
