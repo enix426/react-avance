@@ -8,9 +8,11 @@ import {
   FormContainer,
   FieldGroup,
   Error,
-  Button,
   CommentList,
+  SpinnerContainer,
+  StyledButton,
 } from './Comments.styles';
+import { Spin } from 'antd';
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
@@ -44,7 +46,14 @@ const Comments = () => {
     body: Yup.string().required('Commentaire requis'),
   });
 
-  if (loading) return <Container>Chargement des commentaires...</Container>;
+  if (loading) {
+    return (
+      <SpinnerContainer>
+        <Spin size="large" />
+      </SpinnerContainer>
+    );
+  }
+
   if (error) return <Container>Erreur : {error}</Container>;
 
   return (
@@ -73,9 +82,9 @@ const Comments = () => {
                 <Field as="textarea" name="body" />
                 <ErrorMessage name="body" component={Error} />
               </FieldGroup>
-              <Button type="submit" disabled={isSubmitting}>
+              <StyledButton type="primary" htmlType="submit" loading={isSubmitting} iconPosition="end" >
                 Ajouter
-              </Button>
+              </StyledButton>
             </Form>
           )}
         </Formik>
